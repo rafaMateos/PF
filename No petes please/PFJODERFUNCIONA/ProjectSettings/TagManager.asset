@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ataque
+  - Enemigo
+  - Puzle
+  - sound
+  - salud
+  - mana
+  - espadaMedia
+  - espadaLegendaria
+  - armaduraMedia
+  - jefe
+  - cofre1
+  - cofre2
+  - cofre3
+  - cofre4
+  - dinero
+  - vidas
+  - moneda1
+  - moneda2
+  - moneda3
+  - jarron1
+  - jarron2
+  - jarron3
+  - jarron4
+  - Enemigo1
+  - Enemigo2
+  - Enemigo3
+  - Enemigo4
+  - Enemigo5
+  - botasRapidas
+  - vidaInfinita
+  - manaInfinito
+  - atckDistEne
+  - colliderJefe1
+  - cofre5
+  - cofre6
+  - cofre7
+  - cofre8
+  - moneda4
+  - moneda5
+  - moneda6
+  - moneda7
+  - moneda8
+  - Enemigo6
+  - Enemigo7
+  - Enemigo8
+  - puerta1
+  - puerta2
+  - puerta3
+  - guardar
+  - llave1
+  - llave2
+  - llave3
+  - llave4
+  - llave5
+  - palanca1
+  - palanca2
+  - palanca3
+  - palanca4
+  - palanca5
+  - hitJugador
+  - hitEnemigo
+  - palanca6
+  - palanca7
+  - palanca8
+  - palanca9
+  - palanca10
+  - tienda
+  - tiendaSalida
+  - llave6
+  - JefeFinal
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - enemigo
+  - Menus
+  - Mapas
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3157637121
+    locked: 0
