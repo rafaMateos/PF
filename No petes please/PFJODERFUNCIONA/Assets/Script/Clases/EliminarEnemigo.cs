@@ -28,6 +28,9 @@ public class EliminarEnemigo : MonoBehaviour
                 ObtenerEstadoEnemigos();
                 Enemigo.speed = 0;
                 GetComponent<Enemy2>().speed = 0;
+                GameObject.FindGameObjectWithTag("hitEnemigo").GetComponent<AudioSource>().Play();
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+                StartCoroutine(esperarParaCambioDeColorDaño());
                 zonaAtaque.enabled = false;
                 animator.Play("muerte");
                 audio.Play();
@@ -47,18 +50,24 @@ public class EliminarEnemigo : MonoBehaviour
                         SaludEnemigos.saludActual--;
                         Debug.Log(SaludEnemigos.saludActual);
                         GameObject.FindGameObjectWithTag("hitEnemigo").GetComponent<AudioSource>().Play();
+                        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+                        StartCoroutine(esperarParaCambioDeColorDaño());
                         break;
 
                     case "espadaMedia":
                         SaludEnemigos.saludActual -= ConstantesEspadas.DANIOESPADAMEDIA;
                         Debug.Log(SaludEnemigos.saludActual);
                         GameObject.FindGameObjectWithTag("hitEnemigo").GetComponent<AudioSource>().Play();
+                        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+                        StartCoroutine(esperarParaCambioDeColorDaño());
                         break;
 
                     case "espadaLegendaria":
                         SaludEnemigos.saludActual -= ConstantesEspadas.DANIOESPADALEGENDARIA;
                         Debug.Log(SaludEnemigos.saludActual);
                         GameObject.FindGameObjectWithTag("hitEnemigo").GetComponent<AudioSource>().Play();
+                        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+                        StartCoroutine(esperarParaCambioDeColorDaño());
                         break;
                 }
                
@@ -68,6 +77,11 @@ public class EliminarEnemigo : MonoBehaviour
         }
     }
 
+    IEnumerator esperarParaCambioDeColorDaño() {
+
+        yield return new WaitForSeconds(0.5f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
+    }
 
     private IEnumerator OnCollisionEnter2D(Collision2D collision)
     {
@@ -84,9 +98,7 @@ public class EliminarEnemigo : MonoBehaviour
                 yield return new WaitForSeconds(2f);
                 Destroy(gameObject);
 
-                /*Debemos devolver los valores por defecto a los enemigos ya que es un script general para todos ellos
-                 Si no hicieramos esto los siguientes enemigos no tendrian salud ni velocidad ya que son diferentes GameObjects
-                 y utilizamos la misma instacia de ellos*/
+             
                 SaludEnemigos.saludActual = 10;
                 Enemigo.speed = 2;
 

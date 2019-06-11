@@ -25,6 +25,8 @@ public class SaludEnemigosEstaticos : MonoBehaviour
 
                 saludActual--;
                 GameObject.FindGameObjectWithTag("hitEnemigo").GetComponent<AudioSource>().Play();
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+                StartCoroutine(esperarParaCambioDeColorDaño());
                 Debug.Log(saludActual);
             }
         }
@@ -37,6 +39,14 @@ public class SaludEnemigosEstaticos : MonoBehaviour
         Destroy(gameObject);
        
     }
+
+    IEnumerator esperarParaCambioDeColorDaño()
+    {
+
+        yield return new WaitForSeconds(0.5f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -56,19 +66,15 @@ public class SaludEnemigosEstaticos : MonoBehaviour
             case "Enemigo1":
                 DatosPartida.Enemigo1 = true;
                 break;
-
             case "Enemigo2":
                 DatosPartida.Enemigo2 = true;
                 break;
-
             case "Enemigo3":
                 DatosPartida.Enemigo3 = true;
                 break;
-
             case "Enemigo4":
                 DatosPartida.Enemigo4 = true;
                 break;
-
             case "Enemigo5":
                 DatosPartida.Enemigo5 = true;
                 break;

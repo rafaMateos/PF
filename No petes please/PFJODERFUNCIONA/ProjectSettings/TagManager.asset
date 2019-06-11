@@ -161,6 +161,7 @@ TagManager:
   - puerta6
   - puerta7
   - puerta8
+  - Enemigo54
   layers:
   - Default
   - TransparentFX

@@ -63,8 +63,6 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 98ad81e9f689a492509f07e75b810aaa Unity.TextMeshPro.dll:TMPro.TMP_InputField
 f32d1d61e48bba08149fd1b81df8d6f5 Assembly-CSharp.dll:Tiled2Unity.GroupLayer
-71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
-71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 a2037a6d3d69e2ae4365852f05289f5a Assembly-CSharp.dll:Tiled2Unity.RectangleObject
 0f323a096c305bc7d757b69b04f9c082 Assembly-CSharp.dll:.Inventario
 a2037a6d3d69e2ae4365852f05289f5a Assembly-CSharp.dll:Tiled2Unity.PolylineObject
@@ -204,6 +202,7 @@ e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.Examples.TextConsoleSimulator
 62fef86270a167c41a606cfca1ecc156 Assembly-CSharp.dll:TMPro.Examples.ShaderPropAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_A
+de9c25cac60a06447ed46552a8c8a8c9 Assembly-CSharp.dll:.ConjuntoEnemigos
 a2037a6d3d69e2ae4365852f05289f5a Assembly-CSharp.dll:Tiled2Unity.PolygonObject
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UltimaPosicionTienda
 a2037a6d3d69e2ae4365852f05289f5a Assembly-CSharp.dll:Tiled2Unity.CircleObject

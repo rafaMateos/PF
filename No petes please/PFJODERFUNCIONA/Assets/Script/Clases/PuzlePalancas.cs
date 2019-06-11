@@ -66,9 +66,9 @@ public class PuzlePalancas : MonoBehaviour
     IEnumerator acabarConObjeto()
     {
         yield return new WaitForSeconds(1f);
-        if(puerta1)
-        Destroy(puertaAbrir);
-        if(puerta2)
+        if (puerta1)
+            Destroy(puertaAbrir);
+        if (puerta2)
             Destroy(puertaAbrir2);
     }
     void obtenerPosicionPalancas() {

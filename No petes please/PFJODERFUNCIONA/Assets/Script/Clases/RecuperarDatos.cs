@@ -794,7 +794,7 @@ public class RecuperarDatos : MonoBehaviour
         }
         if (enemigoEstado21.Equals("True"))
         {
-            Destroy(GameObject.FindGameObjectWithTag("Enemigo"));
+            Destroy(GameObject.FindGameObjectWithTag("Enemigo21"));
             DatosPartida.Enemigo21 = true;
         }
         if (enemigoEstado22.Equals("True"))
