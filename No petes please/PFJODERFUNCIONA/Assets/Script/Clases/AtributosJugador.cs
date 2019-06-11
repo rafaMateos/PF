@@ -28,6 +28,7 @@ public class AtributosJugador : MonoBehaviour
 
     private void Update()
     {
+        vidainfinita = true;
         Texto.text = vidas.ToString();
         if (Mana != null) {
             Mana.localScale = new Vector3(mana, 1, 1);

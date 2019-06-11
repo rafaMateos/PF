@@ -85,6 +85,42 @@ public class ActivarAnimaciones : MonoBehaviour
             case "cofre8":
                 DatosPartida.cofre8 = true;
                 break;
+
+            case "cofre9":
+                DatosPartida.cofre9 = true;
+                break;
+
+            case "cofre10":
+                DatosPartida.cofre10 = true;
+                break;
+
+            case "cofre11":
+                DatosPartida.cofre11 = true;
+                break;
+
+            case "cofre12":
+                DatosPartida.cofre12 = true;
+                break;
+
+            case "cofre13":
+                DatosPartida.cofre13 = true;
+                break;
+
+            case "cofre14":
+                DatosPartida.cofre14 = true;
+                break;
+
+            case "cofre15":
+                DatosPartida.cofre8 = true;
+                break;
+
+            case "cofre16":
+                DatosPartida.cofre16 = true;
+                break;
+
+            case "cofre17":
+                DatosPartida.cofre17 = true;
+                break;
         }
     }
 

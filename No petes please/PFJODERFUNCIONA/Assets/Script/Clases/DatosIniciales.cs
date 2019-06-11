@@ -113,8 +113,8 @@ public class DatosIniciales : MonoBehaviour
         string datosACargar = GuardarPartida.LeeArchivo(rutaAux);
         string[] listaDatosDineroYSalud = datosACargar.Split('_');
 
-        string[] dinero = listaDatosDineroYSalud[10].Split(':');
-        string[] vidas = listaDatosDineroYSalud[11].Split(':');
+        string[] dinero = listaDatosDineroYSalud[19].Split(':');
+        string[] vidas = listaDatosDineroYSalud[20].Split(':');
 
         string dineroRecuperado = dinero[1];
         string vidasRecuperado = vidas[1];
@@ -129,8 +129,8 @@ public class DatosIniciales : MonoBehaviour
         string datosACargar1 = GuardarPartida.LeeArchivo(rutaAux1);
         string[] listaDatosDineroYSalud1 = datosACargar1.Split('_');
 
-        string[] dinero1 = listaDatosDineroYSalud1[10].Split(':');
-        string[] vidas1 = listaDatosDineroYSalud1[11].Split(':');
+        string[] dinero1 = listaDatosDineroYSalud1[19].Split(':');
+        string[] vidas1 = listaDatosDineroYSalud1[20].Split(':');
 
         string dineroRecuperado1 = dinero1[1];
         string vidasRecuperado1 = vidas1[1];
@@ -143,8 +143,8 @@ public class DatosIniciales : MonoBehaviour
         string datosACargar2 = GuardarPartida.LeeArchivo(rutaAux2);
         string[] listaDatosDineroYSalud2 = datosACargar2.Split('_');
 
-        string[] dinero2 = listaDatosDineroYSalud2[10].Split(':');
-        string[] vidas2 = listaDatosDineroYSalud2[11].Split(':');
+        string[] dinero2 = listaDatosDineroYSalud2[19].Split(':');
+        string[] vidas2 = listaDatosDineroYSalud2[20].Split(':');
 
         string dineroRecuperado2 = dinero2[1];
         string vidasRecuperado2 = vidas2[1];
@@ -158,8 +158,8 @@ public class DatosIniciales : MonoBehaviour
         string datosACargar1 = GuardarPartida.LeeArchivo(rutaAux1);
         string[] listaDatosDineroYSalud1 = datosACargar1.Split('_');
 
-        string[] dinero1 = listaDatosDineroYSalud1[10].Split(':');
-        string[] vidas1 = listaDatosDineroYSalud1[11].Split(':');
+        string[] dinero1 = listaDatosDineroYSalud1[19].Split(':');
+        string[] vidas1 = listaDatosDineroYSalud1[20].Split(':');
 
         string dineroRecuperado1 = dinero1[1];
         string vidasRecuperado1 = vidas1[1];
@@ -172,8 +172,8 @@ public class DatosIniciales : MonoBehaviour
         string datosACargar2 = GuardarPartida.LeeArchivo(rutaAux2);
         string[] listaDatosDineroYSalud2 = datosACargar2.Split('_');
 
-        string[] dinero2 = listaDatosDineroYSalud2[10].Split(':');
-        string[] vidas2 = listaDatosDineroYSalud2[11].Split(':');
+        string[] dinero2 = listaDatosDineroYSalud2[19].Split(':');
+        string[] vidas2 = listaDatosDineroYSalud2[20].Split(':');
 
         string dineroRecuperado2 = dinero2[1];
         string vidasRecuperado2 = vidas2[1];
@@ -187,8 +187,8 @@ public class DatosIniciales : MonoBehaviour
         string datosACargar3 = GuardarPartida.LeeArchivo(rutaAux3);
         string[] listaDatosDineroYSalud3 = datosACargar3.Split('_');
 
-        string[] dinero3 = listaDatosDineroYSalud3[10].Split(':');
-        string[] vidas3 = listaDatosDineroYSalud3[11].Split(':');
+        string[] dinero3 = listaDatosDineroYSalud3[19].Split(':');
+        string[] vidas3 = listaDatosDineroYSalud3[20].Split(':');
 
         string dineroRecuperado3 = dinero3[1];
         string vidasRecuperado3 = vidas3[1];

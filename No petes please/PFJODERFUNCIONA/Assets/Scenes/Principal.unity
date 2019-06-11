@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 43122942}
   m_Layer: 0
   m_Name: Cofre (8)
-  m_TagString: Untagged
+  m_TagString: cofre10
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 48772453}
   m_Layer: 0
   m_Name: moneda (19)
-  m_TagString: Untagged
+  m_TagString: moneda20
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1576,7 +1576,7 @@ GameObject:
   - component: {fileID: 107028237}
   m_Layer: 0
   m_Name: Cofre (16)
-  m_TagString: Untagged
+  m_TagString: cofre16
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2787,7 +2787,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo17
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -3506,7 +3506,7 @@ GameObject:
   - component: {fileID: 192168505}
   m_Layer: 0
   m_Name: moneda (23)
-  m_TagString: Untagged
+  m_TagString: moneda24
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3747,7 +3747,7 @@ GameObject:
   - component: {fileID: 192337270}
   m_Layer: 0
   m_Name: deceleon_0 (29)
-  m_TagString: Untagged
+  m_TagString: Enemigo28
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3905,7 +3905,7 @@ GameObject:
   - component: {fileID: 200125665}
   m_Layer: 0
   m_Name: moneda (12)
-  m_TagString: Untagged
+  m_TagString: moneda13
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4218,7 +4218,7 @@ GameObject:
   - component: {fileID: 205700511}
   m_Layer: 0
   m_Name: Fuego (4)
-  m_TagString: Untagged
+  m_TagString: puerta5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4816,7 +4816,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo24
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -5938,7 +5938,7 @@ GameObject:
   - component: {fileID: 278605197}
   m_Layer: 0
   m_Name: Fuego (3)
-  m_TagString: Untagged
+  m_TagString: puerta4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6066,7 +6066,7 @@ GameObject:
   - component: {fileID: 287793803}
   m_Layer: 0
   m_Name: deceleon_0 (3)
-  m_TagString: Untagged
+  m_TagString: Enemigo9
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6381,7 +6381,7 @@ GameObject:
   - component: {fileID: 296670653}
   m_Layer: 0
   m_Name: deceleon_0 (17)
-  m_TagString: Untagged
+  m_TagString: Enemigo42
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7394,7 +7394,7 @@ GameObject:
   - component: {fileID: 342759591}
   m_Layer: 0
   m_Name: deceleon_0 (16)
-  m_TagString: Untagged
+  m_TagString: Enemigo39
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8108,7 +8108,7 @@ GameObject:
   - component: {fileID: 386425033}
   m_Layer: 0
   m_Name: deceleon_0 (22)
-  m_TagString: Untagged
+  m_TagString: Enemigo36
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8829,6 +8829,132 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 6
   longitudMovimiento: 5
+--- !u!1 &397597747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 397597751}
+  - component: {fileID: 397597750}
+  - component: {fileID: 397597749}
+  - component: {fileID: 397597748}
+  m_Layer: 0
+  m_Name: Fuego (7)
+  m_TagString: puerta6
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &397597748
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397597747}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 51ac1be797c005b43b2c7b8876a2d1f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &397597749
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397597747}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.875, y: 1}
+    newSize: {x: 0.875, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.875, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &397597750
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397597747}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 9
+  m_Sprite: {fileID: 21300094, guid: 95fea399b454e0747bbaad01102e4043, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.875, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &397597751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397597747}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -60.72, y: 500.8, z: -0.6055074}
+  m_LocalScale: {x: 6.119843, y: 3.489273, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 268
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &401673497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8681943028850948238, guid: 50fde61ea3437424ea2b3278566193ba,
@@ -8940,7 +9066,7 @@ GameObject:
   - component: {fileID: 417617821}
   m_Layer: 0
   m_Name: moneda (33)
-  m_TagString: Untagged
+  m_TagString: moneda34
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9601,7 +9727,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo22
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -10073,7 +10199,7 @@ GameObject:
   - component: {fileID: 461487701}
   m_Layer: 0
   m_Name: deceleon_0 (20)
-  m_TagString: Untagged
+  m_TagString: Enemigo26
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11486,7 +11612,7 @@ GameObject:
   - component: {fileID: 523778920}
   m_Layer: 0
   m_Name: moneda (14)
-  m_TagString: Untagged
+  m_TagString: moneda15
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11931,7 +12057,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo25
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -12720,7 +12846,7 @@ GameObject:
   - component: {fileID: 560695721}
   m_Layer: 0
   m_Name: moneda (17)
-  m_TagString: Untagged
+  m_TagString: moneda18
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13641,7 +13767,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Enemigo8
+      value: Enemigo49
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -14583,7 +14709,7 @@ GameObject:
   - component: {fileID: 673035265}
   m_Layer: 0
   m_Name: moneda (21)
-  m_TagString: Untagged
+  m_TagString: moneda22
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14994,7 +15120,7 @@ GameObject:
   - component: {fileID: 702675986}
   m_Layer: 0
   m_Name: deceleon_0 (28)
-  m_TagString: Untagged
+  m_TagString: Enemigo27
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15986,7 +16112,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo35
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -16733,7 +16859,7 @@ GameObject:
   - component: {fileID: 767212395}
   m_Layer: 0
   m_Name: Cofre (13)
-  m_TagString: Untagged
+  m_TagString: cofre13
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18295,7 +18421,7 @@ GameObject:
   - component: {fileID: 825969216}
   m_Layer: 0
   m_Name: deceleon_0 (5)
-  m_TagString: Untagged
+  m_TagString: Enemigo11
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18864,7 +18990,7 @@ GameObject:
   - component: {fileID: 847322767}
   m_Layer: 0
   m_Name: deceleon_0 (10)
-  m_TagString: Untagged
+  m_TagString: Enemigo19
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19231,7 +19357,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Enemigo8
+      value: Enemigo50
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -19437,7 +19563,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo44
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -20895,7 +21021,7 @@ GameObject:
   - component: {fileID: 949111042}
   m_Layer: 0
   m_Name: moneda (24)
-  m_TagString: Untagged
+  m_TagString: moneda25
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21296,7 +21422,7 @@ GameObject:
   - component: {fileID: 971012238}
   m_Layer: 0
   m_Name: deceleon_0 (7)
-  m_TagString: Untagged
+  m_TagString: Enemigo13
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21453,7 +21579,7 @@ GameObject:
   - component: {fileID: 972481232}
   m_Layer: 0
   m_Name: deceleon_0 (19)
-  m_TagString: Untagged
+  m_TagString: Enemigo45
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21610,7 +21736,7 @@ GameObject:
   - component: {fileID: 972768357}
   m_Layer: 0
   m_Name: deceleon_0 (12)
-  m_TagString: Untagged
+  m_TagString: Enemigo15
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22099,7 +22225,7 @@ GameObject:
   - component: {fileID: 996613114}
   m_Layer: 0
   m_Name: deceleon_0 (26)
-  m_TagString: Untagged
+  m_TagString: Enemigo47
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22837,7 +22963,7 @@ GameObject:
   - component: {fileID: 1017436542}
   m_Layer: 0
   m_Name: deceleon_0 (18)
-  m_TagString: Untagged
+  m_TagString: Enemigo43
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23908,7 +24034,7 @@ GameObject:
   - component: {fileID: 1034502045}
   m_Layer: 0
   m_Name: Fuego (5)
-  m_TagString: Untagged
+  m_TagString: puerta6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24116,7 +24242,7 @@ GameObject:
   - component: {fileID: 1039728166}
   m_Layer: 0
   m_Name: moneda (13)
-  m_TagString: Untagged
+  m_TagString: moneda14
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24983,7 +25109,7 @@ GameObject:
   - component: {fileID: 1050248708}
   m_Layer: 0
   m_Name: deceleon_0 (11)
-  m_TagString: Untagged
+  m_TagString: Enemigo14
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25141,7 +25267,7 @@ GameObject:
   - component: {fileID: 1057711076}
   m_Layer: 0
   m_Name: moneda (15)
-  m_TagString: Untagged
+  m_TagString: moneda16
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25773,7 +25899,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo52
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -26249,7 +26375,7 @@ GameObject:
   - component: {fileID: 1119650973}
   m_Layer: 0
   m_Name: deceleon_0 (30)
-  m_TagString: Untagged
+  m_TagString: Enemigo31
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26480,7 +26606,7 @@ GameObject:
   - component: {fileID: 1128932643}
   m_Layer: 0
   m_Name: Cofre (11)
-  m_TagString: Untagged
+  m_TagString: cofre14
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27145,7 +27271,7 @@ GameObject:
   - component: {fileID: 1144083814}
   m_Layer: 0
   m_Name: deceleon_0 (8)
-  m_TagString: Untagged
+  m_TagString: Enemigo16
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27306,7 +27432,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Enemigo8
+      value: Enemigo29
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -27672,7 +27798,7 @@ GameObject:
   - component: {fileID: 1174708231}
   m_Layer: 0
   m_Name: deceleon_0 (9)
-  m_TagString: Untagged
+  m_TagString: Enemigo18
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27830,7 +27956,7 @@ GameObject:
   - component: {fileID: 1175052415}
   m_Layer: 0
   m_Name: moneda (31)
-  m_TagString: Untagged
+  m_TagString: moneda32
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28075,7 +28201,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo20
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -28436,7 +28562,7 @@ GameObject:
   - component: {fileID: 1194313561}
   m_Layer: 0
   m_Name: moneda (26)
-  m_TagString: Untagged
+  m_TagString: moneda27
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28681,7 +28807,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Enemigo8
+      value: Enemigo30
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -29252,7 +29378,7 @@ GameObject:
   - component: {fileID: 1222613380}
   m_Layer: 0
   m_Name: Cofre (15)
-  m_TagString: Untagged
+  m_TagString: cofre17
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29863,7 +29989,7 @@ GameObject:
   - component: {fileID: 1236649340}
   m_Layer: 0
   m_Name: Cofre (9)
-  m_TagString: Untagged
+  m_TagString: cofre9
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30394,7 +30520,7 @@ GameObject:
   - component: {fileID: 1246558417}
   m_Layer: 0
   m_Name: deceleon_0 (31)
-  m_TagString: Untagged
+  m_TagString: Enemigo32
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31472,7 +31598,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo23
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -31749,7 +31875,7 @@ GameObject:
   - component: {fileID: 1297961430}
   m_Layer: 0
   m_Name: moneda (32)
-  m_TagString: Untagged
+  m_TagString: moneda33
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32515,7 +32641,7 @@ GameObject:
   - component: {fileID: 1331948939}
   m_Layer: 0
   m_Name: deceleon_0 (23)
-  m_TagString: Untagged
+  m_TagString: Enemigo37
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32873,7 +32999,7 @@ GameObject:
   - component: {fileID: 1355661200}
   m_Layer: 0
   m_Name: deceleon_0 (6)
-  m_TagString: Untagged
+  m_TagString: Enemigo12
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33205,7 +33331,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo40
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -33477,7 +33603,7 @@ GameObject:
   - component: {fileID: 1376924129}
   m_Layer: 0
   m_Name: moneda (22)
-  m_TagString: Untagged
+  m_TagString: moneda23
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33964,7 +34090,7 @@ GameObject:
   - component: {fileID: 1388197696}
   m_Layer: 0
   m_Name: deceleon_0 (24)
-  m_TagString: Untagged
+  m_TagString: Enemigo38
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34700,7 +34826,7 @@ GameObject:
   - component: {fileID: 1452943038}
   m_Layer: 0
   m_Name: moneda (9)
-  m_TagString: Untagged
+  m_TagString: moneda9
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36029,7 +36155,7 @@ GameObject:
   - component: {fileID: 1518636598}
   m_Layer: 0
   m_Name: moneda (18)
-  m_TagString: Untagged
+  m_TagString: moneda19
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36562,7 +36688,7 @@ GameObject:
   - component: {fileID: 1560657392}
   m_Layer: 0
   m_Name: moneda (10)
-  m_TagString: Untagged
+  m_TagString: moneda11
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37309,7 +37435,7 @@ GameObject:
   - component: {fileID: 1595782654}
   m_Layer: 0
   m_Name: Fuego (6)
-  m_TagString: puerta3
+  m_TagString: puerta7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37677,7 +37803,7 @@ GameObject:
   - component: {fileID: 1607334390}
   m_Layer: 0
   m_Name: moneda (30)
-  m_TagString: Untagged
+  m_TagString: moneda31
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39207,7 +39333,7 @@ GameObject:
   - component: {fileID: 1684956451}
   m_Layer: 0
   m_Name: moneda (5)
-  m_TagString: moneda6
+  m_TagString: guardar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39646,7 +39772,7 @@ GameObject:
   - component: {fileID: 1701198287}
   m_Layer: 0
   m_Name: moneda (27)
-  m_TagString: Untagged
+  m_TagString: moneda28
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40845,7 +40971,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo46
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -41047,7 +41173,7 @@ GameObject:
   - component: {fileID: 1773152606}
   m_Layer: 0
   m_Name: deceleon_0 (15)
-  m_TagString: Untagged
+  m_TagString: Enemigo34
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41278,7 +41404,7 @@ GameObject:
   - component: {fileID: 1784723180}
   m_Layer: 0
   m_Name: deceleon_0 (25)
-  m_TagString: Untagged
+  m_TagString: Enemigo48
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42386,7 +42512,7 @@ GameObject:
   - component: {fileID: 1826576094}
   m_Layer: 0
   m_Name: moneda (11)
-  m_TagString: Untagged
+  m_TagString: moneda12
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44113,7 +44239,7 @@ GameObject:
   - component: {fileID: 1902318870}
   m_Layer: 0
   m_Name: moneda (25)
-  m_TagString: Untagged
+  m_TagString: moneda26
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44751,7 +44877,7 @@ GameObject:
   - component: {fileID: 1913113243}
   m_Layer: 0
   m_Name: moneda (29)
-  m_TagString: Untagged
+  m_TagString: moneda30
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46206,7 +46332,7 @@ GameObject:
   - component: {fileID: 1952218114}
   m_Layer: 0
   m_Name: moneda (28)
-  m_TagString: Untagged
+  m_TagString: moneda29
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47233,7 +47359,7 @@ GameObject:
   - component: {fileID: 1983950529}
   m_Layer: 0
   m_Name: moneda (20)
-  m_TagString: Untagged
+  m_TagString: moneda21
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47976,7 +48102,7 @@ GameObject:
   - component: {fileID: 1997961180}
   m_Layer: 0
   m_Name: moneda (8)
-  m_TagString: Untagged
+  m_TagString: moneda10
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49001,7 +49127,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo21
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -50018,7 +50144,7 @@ GameObject:
   - component: {fileID: 2088141582}
   m_Layer: 0
   m_Name: deceleon_0 (4)
-  m_TagString: Untagged
+  m_TagString: Enemigo10
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50288,7 +50414,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo41
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -50490,7 +50616,7 @@ GameObject:
   - component: {fileID: 2104980116}
   m_Layer: 0
   m_Name: Cofre (10)
-  m_TagString: Untagged
+  m_TagString: cofre12
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50733,7 +50859,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemigo33
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -51224,7 +51350,7 @@ GameObject:
   - component: {fileID: 2115958755}
   m_Layer: 0
   m_Name: Cofre (12)
-  m_TagString: Untagged
+  m_TagString: cofre11
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51822,7 +51948,7 @@ PrefabInstance:
     - target: {fileID: 1892064551190228683, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
       propertyPath: m_TagString
-      value: Enemigo8
+      value: Enemigo51
       objectReference: {fileID: 0}
     - target: {fileID: 1892064551190228677, guid: a4b9729f5a5404b47ace4c4e66fed3cb,
         type: 3}
@@ -52331,7 +52457,7 @@ GameObject:
   - component: {fileID: 2124091389}
   m_Layer: 0
   m_Name: moneda (16)
-  m_TagString: Untagged
+  m_TagString: moneda17
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52661,7 +52787,7 @@ GameObject:
   - component: {fileID: 2144474114}
   m_Layer: 0
   m_Name: Cofre (14)
-  m_TagString: Untagged
+  m_TagString: cofre15
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52924,12 +53050,12 @@ PrefabInstance:
     - target: {fileID: 647126586644041622, guid: 0593a535848c54046af53f4843099c2b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -130.92
+      value: -62.7
       objectReference: {fileID: 0}
     - target: {fileID: 647126586644041622, guid: 0593a535848c54046af53f4843099c2b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 558.13
+      value: 490
       objectReference: {fileID: 0}
     - target: {fileID: 647126586644041622, guid: 0593a535848c54046af53f4843099c2b,
         type: 3}

@@ -130,6 +130,18 @@ public class ZonasOcultas : MonoBehaviour
             case "puerta3":
                 DatosPartida.puerta3 = true;
                 break;
+            case "puerta4":
+                DatosPartida.puerta4 = true;
+                break;
+            case "puerta5":
+                DatosPartida.puerta5 = true;
+                break;
+            case "puerta6":
+                DatosPartida.puerta6 = true;
+                break;
+            case "puerta7":
+                DatosPartida.puerta7 = true;
+                break;
         }
     }
 
