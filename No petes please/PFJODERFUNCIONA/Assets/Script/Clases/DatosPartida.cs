@@ -132,7 +132,12 @@ public class DatosPartida : MonoBehaviour
     public static bool puerta5;
     public static bool puerta6;
     public static bool puerta7;
-    
+
+    public static string tipoArmadura;
+    public static string golpesArmadura;
+
+    public static string espadaEquipada;
+
 
 
 }

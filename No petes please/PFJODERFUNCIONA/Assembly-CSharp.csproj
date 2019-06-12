@@ -83,6 +83,7 @@
     <Compile Include="Assets\Script\Clases\ControladorSalud.cs" />
     <Compile Include="Assets\Script\Clases\ControllerTiempo.cs" />
     <Compile Include="Assets\Script\Clases\DatosIniciales.cs" />
+    <Compile Include="Assets\Script\Clases\DatosInventario.cs" />
     <Compile Include="Assets\Script\Clases\DatosPartida.cs" />
     <Compile Include="Assets\Script\Clases\Destruible.cs" />
     <Compile Include="Assets\Script\Clases\Destruir.cs" />

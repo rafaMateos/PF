@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjetoCogible : MonoBehaviour
 {
 
-    private Inventario inventario;
+    public static Inventario inventario;
     public GameObject Item;
     
 
@@ -20,15 +20,36 @@ public class ObjetoCogible : MonoBehaviour
 
         if (collision.CompareTag("Player")) {
 
-            for (int i = 0; i < inventario.slots.Length; i++) {
+            instanciarInven();
+        }
+    }
 
-                if (!inventario.esCompleto[i]) {
+    public void instanciarInven() {
+        for (int i = 0; i < inventario.slots.Length; i++)
+        {
+            if (!inventario.esCompleto[i])
+            {
+                DatosInventario.añadirObjetoAlInventario(Item.tag);
+                inventario.esCompleto[i] = true;
+                Instantiate(Item, inventario.slots[i].transform, false);
+                Destroy(gameObject);
+                break;
+            }
+        }
+    }
 
-                    inventario.esCompleto[i] = true;
-                    Instantiate(Item,inventario.slots[i].transform, false);
-                    Destroy(gameObject);
-                    break;
-                }
+    public void instanciarInven(GameObject item)
+    {
+        bool acabado = false;
+        for (int i = 0; i < inventario.slots.Length && !acabado; i++)
+        {
+            if (!inventario.esCompleto[i])
+            {
+                DatosInventario.añadirObjetoAlInventario(item.tag);
+                inventario.esCompleto[i] = true;
+                Instantiate(item, inventario.slots[i].transform, false);
+               
+                acabado = true;
             }
         }
     }

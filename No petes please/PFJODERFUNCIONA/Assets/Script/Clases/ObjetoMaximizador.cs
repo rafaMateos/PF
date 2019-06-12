@@ -32,6 +32,7 @@ public class ObjetoMaximizador : MonoBehaviour
                     imagen.sprite = imagenBotas.GetComponent<SpriteRenderer>().sprite;
                     Destroy(gameObject);
                     esObjetoTocado = true;
+                DatosInventario.soltarObjetosInventario(tag);
                     break;
 
                 case "vidaInfinita":
@@ -40,15 +41,16 @@ public class ObjetoMaximizador : MonoBehaviour
                     imagen.sprite = imagenVidaInfinita.GetComponent<SpriteRenderer>().sprite;
                     Destroy(gameObject);
                     esObjetoTocado = true;
-                    break;
+                DatosInventario.soltarObjetosInventario(tag);
+                break;
 
                 case "manaInfinito":
                     AtributosJugador.manaInfinito = true;
                     imagen.sprite = imagenManaInfinito.GetComponent<SpriteRenderer>().sprite;
                     Destroy(gameObject);
                     esObjetoTocado = true;
-                   
-                    break;
+                DatosInventario.soltarObjetosInventario(tag);
+                break;
             }
         
     }

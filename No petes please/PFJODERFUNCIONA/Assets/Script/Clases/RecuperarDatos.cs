@@ -9,6 +9,9 @@ public class RecuperarDatos : MonoBehaviour
 {
    
     private string rutaGuardado = "C:/Users/" + Environment.UserName + "/Guardado/" + CargarController.nombrePartida + ".txt";
+    public GameObject pocion;
+    public GameObject mana;
+    public GameObject vida;
     private void Start()
     {
        
@@ -21,6 +24,9 @@ public class RecuperarDatos : MonoBehaviour
             obtenerEstadoJarrones();
             ObtenerEstadoEnemigos();
             ObtenerEstadoPuertas();
+            ObtenerEstadoArmadura();
+            ObtenerEstadoEspada();
+            ObtenerObjetosInventario();
         }
        
     }
@@ -1015,5 +1021,160 @@ public class RecuperarDatos : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("puerta6"));
             DatosPartida.puerta6 = true;
         }
+    }
+    private void ObtenerEstadoArmadura() {
+        string datosACargar = GuardarPartida.LeeArchivo(rutaGuardado);
+        string[] listaArmaduraYGolpes = datosACargar.Split('_');
+
+        string[] tipoArmadura = listaArmaduraYGolpes[119].Split(':');
+        string[] golpes = listaArmaduraYGolpes[120].Split(':');
+
+        string tipoArmaduraEstado = tipoArmadura[1];
+        string golpesEstado = golpes[1];
+
+        switch (tipoArmaduraEstado) {
+
+            case "armaduraMedia":
+                AtributosJugador.armaduraEquipada = tipoArmaduraEstado;
+                ManejadoraTienda.golpesMedia = int.Parse(golpesEstado);
+                break;
+            case "armaduraBasica":
+                //No cambiar la imagen
+                AtributosJugador.armaduraEquipada = tipoArmaduraEstado;
+                ManejadoraTienda.golpesBasica = int.Parse(golpesEstado);
+                break;
+
+            case "sinArmadura":
+                AtributosJugador.armaduraEquipada = tipoArmaduraEstado;
+               
+                break;
+        }
+    }
+    private void ObtenerEstadoEspada() {
+        string datosACargar = GuardarPartida.LeeArchivo(rutaGuardado);
+        string[] listaEspada = datosACargar.Split('_');
+
+        string[] tipoEspada = listaEspada[121].Split(':');
+       
+        string tipoEspadaEstado = tipoEspada[1];
+
+        switch (tipoEspadaEstado) {
+
+            case "espadaMedia":
+                AtributosJugador.espadaEquipada = tipoEspadaEstado;
+                break;
+
+            case "espadaLegendaria":
+                AtributosJugador.espadaEquipada = tipoEspadaEstado;
+                break;
+
+
+        }
+        
+        
+    }
+    private void ObtenerObjetosInventario() {
+        ObjetoCogible objetos = new ObjetoCogible();
+        string datosACargar = GuardarPartida.LeeArchivo(rutaGuardado);
+        string[] listaItems = datosACargar.Split('_');
+
+        string[] item1 = new string[2];
+        string[] item2 = new string[2];
+        string[] item3 = new string[2];
+        string[] item4 = new string[2];
+
+        string item1Estado = "";
+        string item2Estado = "";
+        string item3Estado = "";
+        string item4Estado = "";
+        
+
+
+        switch (listaItems.Length - 1) {
+
+            case 122:
+                item1 = listaItems[122].Split(':');
+                item1Estado = item1[1];
+               
+                break;
+            case 123:
+                item1 = listaItems[122].Split(':');
+                item2 = listaItems[123].Split(':');
+                item1Estado = item1[1];
+                item2Estado = item2[1];
+                break;
+            case 124:
+                item1 = listaItems[122].Split(':');
+                item2 = listaItems[123].Split(':');
+                item3 = listaItems[124].Split(':');
+                item1Estado = item1[1];
+                item2Estado = item2[1];
+                item3Estado = item3[1];
+
+                break;
+            case 125:
+                item1 = listaItems[122].Split(':');
+                item2 = listaItems[123].Split(':');
+                item3 = listaItems[124].Split(':');
+                item4 = listaItems[125].Split(':');
+                item1Estado = item1[1];
+                item2Estado = item2[1];
+                item3Estado = item3[1];
+                item4Estado = item4[1];
+                break;
+            
+        }
+
+        if (item1Estado.Equals("manaInfinito")){
+            objetos.instanciarInven(mana);
+        } else if (item1Estado.Equals("vidaInfinita")) {
+            objetos.instanciarInven(vida);
+        }
+        else if(item1Estado.Equals("Untagged")){
+            objetos.instanciarInven(pocion);
+        }
+
+
+        if (item2Estado.Equals("manaInfinito"))
+        {
+            objetos.instanciarInven(mana);
+        }
+        else if (item2Estado.Equals("vidaInfinita"))
+        {
+            objetos.instanciarInven(vida);
+        }
+        else if(item2Estado.Equals("Untagged"))
+        {
+            objetos.instanciarInven(pocion);
+        }
+
+
+        if (item3Estado.Equals("manaInfinito"))
+        {
+            objetos.instanciarInven(mana);
+        }
+        else if (item3Estado.Equals("vidaInfinita"))
+        {
+            objetos.instanciarInven(vida);
+        }
+        else if (item3Estado.Equals("Untagged"))
+        {
+            objetos.instanciarInven(pocion);
+        }
+
+
+        if (item4Estado.Equals("manaInfinito"))
+        {
+            objetos.instanciarInven(mana);
+        }
+        else if (item4Estado.Equals("vidaInfinita"))
+        {
+            objetos.instanciarInven(vida);
+        }
+        else if (item4Estado.Equals("Untagged"))
+        {
+            objetos.instanciarInven(pocion);
+        }
+
     }
 }

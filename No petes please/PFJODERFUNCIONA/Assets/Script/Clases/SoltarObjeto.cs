@@ -17,6 +17,7 @@ public class SoltarObjeto : MonoBehaviour
 
         Vector2 pos = new Vector2(posJug.position.x, posJug.position.y + 1);
         Instantiate(item, pos, Quaternion.identity);
+        DatosInventario.soltarObjetosInventario(item.tag);
     }
 
     // Update is called once per frame

@@ -12,16 +12,14 @@ public class AtributosJugador : MonoBehaviour
     public Text Texto;
     private RectTransform Mana;
     public static bool tieneMana = true;
-    public static string espadaEquipada;
-    public static string armaduraEquipada;
+    public static string espadaEquipada = "espadaBasica";
+    public static string armaduraEquipada = "armaduraBasica";
     public static bool botasRapidas;
     public static bool vidainfinita;
     public static bool manaInfinito;
 
     private void Start()
     {
-        espadaEquipada = "espadaBasica";
-        armaduraEquipada = "armaduraBasica";
         atributosJugador = this;
         Mana = GetComponent<RectTransform>();
     }

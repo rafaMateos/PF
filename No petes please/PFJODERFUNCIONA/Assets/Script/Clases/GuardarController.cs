@@ -109,9 +109,17 @@ public class GuardarController : MonoBehaviour
                             + "_" + "puerta1:" + DatosPartida.puerta1 +"_" + "puerta2:" + DatosPartida.puerta2
                              + "_" + "puerta3:" + DatosPartida.puerta3 + "_" + "puerta3:" + DatosPartida.puerta4
                                + "_" + "puerta3:" + DatosPartida.puerta5 + "_" + "puerta3:" + DatosPartida.puerta6
-                                 + "_" + "puerta3:" + DatosPartida.puerta7; 
+                                 + "_" + "puerta3:" + DatosPartida.puerta7
+                                 + "_" + "armaduraEquipada:" + DatosPartida.tipoArmadura + "_" + "golpesArmadura:" + DatosPartida.golpesArmadura
+                                 + "_" + "espadaEquipada:" + DatosPartida.espadaEquipada
+                                 ;
+
+            for (int i = 0; i < DatosInventario.objetosEnInventario.Count; i++) {
+                datosAGuardar += "_" + "slot:" + DatosInventario.objetosEnInventario[i];
+            }
 
             GuardarPartida.EscribeEnArchivo(datosAGuardar, rutaGuardado, true);
+            datosAGuardar = "";
            
             GameObject.FindGameObjectWithTag("Player").GetComponent<Movimiento>().velocidad = 6;
             Time.timeScale = 1;
@@ -125,6 +133,7 @@ public class GuardarController : MonoBehaviour
         }
 
         
+
 
 
     }

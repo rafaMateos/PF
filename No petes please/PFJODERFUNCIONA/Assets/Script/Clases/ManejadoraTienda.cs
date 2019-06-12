@@ -34,9 +34,40 @@ public class ManejadoraTienda : MonoBehaviour
 
     private void Start()
     {
-        golpesMedia = ConstantesArmaduras.golpesAguantaArmaduraMedia;
+     
         golpesBasica = ConstantesArmaduras.golpesAguantaArmaduraBasica;
-        golpesLegendaria = ConstantesArmaduras.golpesAguantaArmaduraLegendaria;
+      
+
+        switch (AtributosJugador.armaduraEquipada) {
+
+            case "armaduraMedia":
+                cascoMedia.sprite = CascoArmaduraMedia.GetComponent<SpriteRenderer>().sprite;
+                torsoMedia.sprite = PechoArmaduraMedia.GetComponent<SpriteRenderer>().sprite;
+                piernasMedia.sprite = PiernasArmaduraMedia.GetComponent<SpriteRenderer>().sprite;
+                
+                break;
+            case "sinArmadura":
+                cascoMedia.sprite = cascoArmaduraRoto.GetComponent<SpriteRenderer>().sprite;
+                torsoMedia.sprite = cascoArmaduraRoto.GetComponent<SpriteRenderer>().sprite;
+                piernasMedia.sprite = cascoArmaduraRoto.GetComponent<SpriteRenderer>().sprite;
+               
+                break;
+        }
+
+        switch (AtributosJugador.espadaEquipada)
+        {
+
+            case "espadaMedia":
+                imagenEspada.sprite = espadaMedia.GetComponent<SpriteRenderer>().sprite;
+                daño.text = ConstantesEspadas.DANIOESPADAMEDIA.ToString();
+                break;
+            case "espadaLegendaria":
+                imagenEspada.sprite = espadaMediaLegendaria.GetComponent<SpriteRenderer>().sprite;
+                daño.text = ConstantesEspadas.DANIOESPADALEGENDARIA.ToString();
+                break;
+
+
+        }
     }
     // Start is called before the first frame update
     public void cancelarCompra()
@@ -101,6 +132,7 @@ public class ManejadoraTienda : MonoBehaviour
                         GameObject.FindGameObjectWithTag("Player").GetComponent<Movimiento>().velocidad = 6;
                         ScorePoint.puntos -= ConstantesTeinda.PRECIOESPADAMEDIA;
                         AtributosJugador.espadaEquipada = "espadaMedia";
+                        DatosPartida.espadaEquipada = "espadaMedia";
                     }
                     else
                     {
@@ -112,6 +144,7 @@ public class ManejadoraTienda : MonoBehaviour
 
                     if (dineroActual >= ConstantesTeinda.PRECIOESPALEGENDARIA)
                     {
+                        DatosPartida.espadaEquipada = "espadaLegendaria";
                         imagenEspada.sprite = espadaMediaLegendaria.GetComponent<SpriteRenderer>().sprite;
                         daño.text = ConstantesEspadas.DANIOESPADALEGENDARIA.ToString();
                         descripEspadas.text = ConstantesEspadas.DESCRIPESPADALEGENDARIA;
@@ -164,12 +197,15 @@ public class ManejadoraTienda : MonoBehaviour
       
             texto.text = precio.ToString() + " $$$";
             descrip.text = descripTexto;
+            
 
             switch (AtributosJugador.armaduraEquipada) {
 
                 case "armaduraBasica":
                     golpesArmadura.text = golpesBasica.ToString();
-                    if (golpesBasica < 0) {
+                    DatosPartida.golpesArmadura = golpesBasica.ToString();
+                    
+                    if (golpesBasica <= 0) {
                     golpesArmadura.text = 0.ToString();
                     cascoMedia.sprite = cascoArmaduraRoto.GetComponent<SpriteRenderer>().sprite;
                     torsoMedia.sprite = cascoArmaduraRoto.GetComponent<SpriteRenderer>().sprite;
@@ -182,7 +218,8 @@ public class ManejadoraTienda : MonoBehaviour
 
                 case "armaduraMedia":
                     golpesArmadura.text = golpesMedia.ToString();
-                    if (golpesMedia < 0) {
+                    DatosPartida.golpesArmadura = golpesMedia.ToString();
+                if (golpesMedia <= 0) {
                     golpesArmadura.text = 0.ToString();
                     cascoMedia.sprite = cascoArmaduraRoto.GetComponent<SpriteRenderer>().sprite;
                     torsoMedia.sprite = cascoArmaduraRoto.GetComponent<SpriteRenderer>().sprite;
@@ -194,6 +231,9 @@ public class ManejadoraTienda : MonoBehaviour
 
                
             }
+
+        DatosPartida.tipoArmadura = AtributosJugador.armaduraEquipada;
+      
        
     }
 }

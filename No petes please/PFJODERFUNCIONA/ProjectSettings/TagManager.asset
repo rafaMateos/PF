@@ -162,6 +162,10 @@ TagManager:
   - puerta7
   - puerta8
   - Enemigo54
+  - casco
+  - piernas
+  - torso
+  - pocion
   layers:
   - Default
   - TransparentFX
