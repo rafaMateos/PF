@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Destruir : MonoBehaviour
 {
-
+    //Variable de clase
     GameObject dinero;
-    // Start is called before the first frame update
+   
     void Start()
     {
         dinero = GetComponent<GameObject>();
         
     }
 
+    /// <summary>
+    /// Evento trigguer encargado de la gestion al colisionar con una moneda
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) {
@@ -25,7 +29,9 @@ public class Destruir : MonoBehaviour
 
     }
 
-
+    /// <summary>
+    /// Metodo para cambiar estado monedas
+    /// </summary>
     private void CambiarEstado() {
 
         switch (tag) {
@@ -169,9 +175,5 @@ public class Destruir : MonoBehaviour
 
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

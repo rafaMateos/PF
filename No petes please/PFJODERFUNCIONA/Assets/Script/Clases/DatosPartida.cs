@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DatosPartida : MonoBehaviour
 {
+    //La clase mas tocha del siglo. (Espero que caundo veas esto ya sepas porque tuve que hacerlo asi.)
+
+    //Varibles de clase......
     public static string nombrePartida = "";
 
     public static float PosJugX;

@@ -12,6 +12,11 @@ public class ZonaDeAtauqe : MonoBehaviour {
         anim = GetComponent<Animator>();
 	}
 	
+    /// <summary>
+    /// Metodo encargado de activar o desativar el componente del ataque asociado al jugador
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
     public IEnumerator ShowArea(string name) {
         anim.Play("Area_Show");
         transform.GetChild(0).GetComponent<Text>().text = name;

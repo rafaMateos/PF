@@ -6,19 +6,19 @@ using UnityEngine.UI;
 public class ScorePoint : MonoBehaviour
 {
 
-    public static int puntos = 100;
+    public static int puntos = 500;
     public string textoMostrar = "";
 
     public Text Texto;
 
     public static ScorePoint scorePoint;
-    // Start is called before the first frame update
+    
 
     private void Awake()
     {
-        scorePoint = this;
+        scorePoint = this; //Singleton
     }
-    // Update is called once per frame
+   
     void Update()
     {
         if (Texto != null) {

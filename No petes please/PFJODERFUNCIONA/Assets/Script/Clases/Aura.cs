@@ -4,37 +4,36 @@ using UnityEngine;
 
 public class Aura : MonoBehaviour {
 
-    // Tiempo de precarga
-    public float waitBeforePlay;
-
-    Animator anim;
-    Coroutine manager;
-    bool loaded;
+   //Varibles de script
+    public float esperarPulsarParaAtacar;
+    Animator animaciones;
+    Coroutine gestorManager;
+    bool cargado;
 
     void Start () {
-        anim = GetComponent<Animator>();
+        animaciones = GetComponent<Animator>();
     }
 
-    public void AuraStart() {
-        manager = StartCoroutine(Manager());
-        anim.Play("Aura_Idle");
+    public void AuraEmpieza() {
+        gestorManager = StartCoroutine(Gestor());
+        animaciones.Play("Aura_Idle");
     }
 
-    public void AuraStop() {
-        StopCoroutine(manager);
-        anim.Play("Aura_Idle");
-        loaded = false;
+    public void AuraAcaba() {
+        StopCoroutine(gestorManager);
+        animaciones.Play("Aura_Idle");
+        cargado = false;
     }
 
-    // Método para comprobar si ya hemos cargado suficiente
-    public IEnumerator Manager() {
-        yield return new WaitForSeconds(waitBeforePlay);
-        anim.Play("Aura_Play");
-        loaded = true;
+    
+    public IEnumerator Gestor() {
+        yield return new WaitForSeconds(esperarPulsarParaAtacar);
+        animaciones.Play("Aura_Play");
+        cargado = true;
     }
 
-    // Método para comprobar si ya hemos cargado suficiente
-    public bool IsLoaded() {
-        return loaded;
+   
+    public bool estaCargado() {
+        return cargado;
     }
 }

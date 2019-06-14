@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class DatosIniciales : MonoBehaviour
 {
   
+    /// <summary>
+    /// Variables de script
+    /// </summary>
     string rutaGuardado = "C:/Users/" + Environment.UserName + "/Guardado/";
     public static List<string> lista = new List<string>();
 
@@ -45,6 +48,9 @@ public class DatosIniciales : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Metodo para obtener los datos iniciales de las partidas ya guardadas
+    /// </summary>
     public void cargarDatos() {
 
         DirectoryInfo Dir = new DirectoryInfo(rutaGuardado);
@@ -90,6 +96,10 @@ public class DatosIniciales : MonoBehaviour
 
         obtenerDineroYSalud();
     }
+
+    /// <summary>
+    /// Metodo para gestionar el dinero y salud de las partidas guardadas
+    /// </summary>
     private void obtenerDineroYSalud() {
 
         switch (numeroPartidas) {
@@ -108,6 +118,9 @@ public class DatosIniciales : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Metodo para obtener dinero y salud de 1 partida
+    /// </summary>
     private void obtenerDineroYSalud1Partida(){
         string rutaAux = rutaGuardado + lista[0];
         string datosACargar = GuardarPartida.LeeArchivo(rutaAux);
@@ -123,6 +136,10 @@ public class DatosIniciales : MonoBehaviour
         vidasPartida1.text = vidasRecuperado;
 
     }
+
+    /// <summary>
+    /// Metodo para obtener dinero y salud de 2 partida
+    /// </summary>
     private void ObtenerDineroYSalud2Partidas() {
         //Obtenemos el de la primera partida
         string rutaAux1 = rutaGuardado + lista[0];
@@ -152,6 +169,11 @@ public class DatosIniciales : MonoBehaviour
         dineroPartida2.text = dineroRecuperado2;
         vidasPartida2.text = vidasRecuperado2;
     }
+
+
+    /// <summary>
+    /// Metodo para obtener dinero y salud de 3 partida
+    /// </summary>
     private void ObtenerDineroYSalud3Partidas() {
         //Obtenemos el de la primera partida
         string rutaAux1 = rutaGuardado + lista[0];
@@ -199,7 +221,9 @@ public class DatosIniciales : MonoBehaviour
 
     }
     
-    // Update is called once per frame
+  /// <summary>
+  /// Funcion uodate encargada de los mostrar actualizados los nombres de las partidas
+  /// </summary>
     void Update()
     {
         nombrePartida1.text = nombrePartidaAux1;
@@ -208,6 +232,10 @@ public class DatosIniciales : MonoBehaviour
        
     }
 
+    /// <summary>
+    /// Metodo para obtener nombre de partidas legibles
+    /// </summary>
+    /// <param name="nombre"></param>
     private void ObtenerNombreLegibles(string nombre) {
 
         string[] listaNombre = nombre.Split('.');
@@ -215,7 +243,9 @@ public class DatosIniciales : MonoBehaviour
 
     }
 
-
+    /// <summary>
+    /// Funcion para obtener el nombre de la 1 partida
+    /// </summary>
     public void obtenerNombrePrimeraPartida() {
 
         nombrePartida1txt = nombrePartida1.text;
@@ -224,7 +254,9 @@ public class DatosIniciales : MonoBehaviour
         cargarDatos();
      
     }
-
+    /// <summary>
+    /// Funcion para obtener el nombre de la 2 partida
+    /// </summary>
     public void obtenerNombreSegundaPartida()
     {
 
@@ -235,6 +267,9 @@ public class DatosIniciales : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Funcion para obtener el nombre de la 1 partida
+    /// </summary>
     public void obtenerNombreTerceraPartida()
     {
 
@@ -244,12 +279,18 @@ public class DatosIniciales : MonoBehaviour
         cargarDatos();
     }
 
+    /// <summary>
+    /// Metodo para guardar y recargar en el momento deseado 
+    /// </summary>
     public void GuardarEnPosicion()
     {
         GuardarController guardado = new GuardarController();
         guardado.GuardarPartidaInGame();
     }
 
+    /// <summary>
+    /// Metodo encargado de la gestion guardado partida tras sobreescribir
+    /// </summary>
     public void guardarPartidaSlot1() {
 
         if (nombrePartida1.text.Equals("vacio")) {
@@ -258,6 +299,9 @@ public class DatosIniciales : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Metodo encargado de la gestion guardado partida tras sobreescribir
+    /// </summary>
     public void guardarPartidaSlot2()
     {
 
@@ -268,6 +312,9 @@ public class DatosIniciales : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Metodo encargado de la gestion guardado partida tras sobreescribir
+    /// </summary>
     public void guardarPartidaSlot3()
     {
 

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemigoPingPong : MonoBehaviour
 {
-
+    //Variables de clase
     public float velocidad;
     public float longitudMovimiento;
     private float contador;

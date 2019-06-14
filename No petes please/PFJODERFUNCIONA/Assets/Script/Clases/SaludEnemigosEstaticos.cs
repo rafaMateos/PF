@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SaludEnemigosEstaticos : MonoBehaviour
 {
+    //Variables de script
     private int saludMax;
     private int saludActual;
     public bool estaMuerto;
-    // Start is called before the first frame update
+  
+
     void Start()
     {
         saludMax = 2;
@@ -15,7 +17,10 @@ public class SaludEnemigosEstaticos : MonoBehaviour
         estaMuerto = false;
     }
 
-
+    /// <summary>
+    /// Gestor salud de los enemigos estaticos
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Ataque"))
@@ -32,6 +37,10 @@ public class SaludEnemigosEstaticos : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Corrutina encarga de la destruccion del objeto
+    /// </summary>
+    /// <returns></returns>
     IEnumerator muerteEspera()
     {
       yield return new WaitForSeconds(0.8f);
@@ -40,6 +49,10 @@ public class SaludEnemigosEstaticos : MonoBehaviour
        
     }
 
+    /// <summary>
+    /// Corrutina encarga del cambio de color tras daño
+    /// </summary>
+    /// <returns></returns>
     IEnumerator esperarParaCambioDeColorDaño()
     {
 
@@ -57,6 +70,10 @@ public class SaludEnemigosEstaticos : MonoBehaviour
             StartCoroutine(muerteEspera());
         }
     }
+
+    /// <summary>
+    /// Metodo encargado de la obtencion del estado de los enemigos
+    /// </summary>
     private void ObtenerEstadoEnemigos()
     {
 

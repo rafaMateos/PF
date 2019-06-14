@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EliminarEnemigo : MonoBehaviour
 {
-
+    //varibles de clase
     private Animator animator;
     private BoxCollider2D zonaAtaque;
     private AudioSource audio;
@@ -17,8 +17,11 @@ public class EliminarEnemigo : MonoBehaviour
     }
 
 
-   
-
+    /// <summary>
+    /// Evento trigger de colison para gestionar la vida de enemigos
+    /// </summary>
+    /// <param name="collision"></param>
+    /// <returns></returns>
   IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -26,8 +29,8 @@ public class EliminarEnemigo : MonoBehaviour
             if (SaludEnemigos.saludActual <= 1)
             {
                 ObtenerEstadoEnemigos();
-                Enemigo.speed = 0;
-                GetComponent<Enemy2>().speed = 0;
+                Enemigo.velocidad = 0;
+                GetComponent<Enemy2>().velocidad = 0;
                 GameObject.FindGameObjectWithTag("hitEnemigo").GetComponent<AudioSource>().Play();
                 gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
                 StartCoroutine(esperarParaCambioDeColorDaño());
@@ -39,7 +42,7 @@ public class EliminarEnemigo : MonoBehaviour
                 
 
                 SaludEnemigos.saludActual = 10;
-                Enemigo.speed = 2;
+                Enemigo.velocidad = 2;
 
             }
             else {
@@ -77,12 +80,21 @@ public class EliminarEnemigo : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Coorutina para cambiar color por daño
+    /// </summary>
+    /// <returns></returns>
     IEnumerator esperarParaCambioDeColorDaño() {
 
         yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
     }
 
+    /// <summary>
+    /// Evento de colison para gestionar la vida de enemigos
+    /// </summary>
+    /// <param name="collision"></param>
+    /// <returns></returns>
     private IEnumerator OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Ataque"))
@@ -90,8 +102,8 @@ public class EliminarEnemigo : MonoBehaviour
             if (SaludEnemigos.saludActual <= 1)
             {
                 ObtenerEstadoEnemigos();
-                GetComponent<Enemy2>().speed = 0;
-                Enemigo.speed = 0;
+                GetComponent<Enemy2>().velocidad = 0;
+                Enemigo.velocidad = 0;
                 zonaAtaque.enabled = false;
                 animator.Play("muerte");
                 audio.Play();
@@ -100,7 +112,7 @@ public class EliminarEnemigo : MonoBehaviour
 
              
                 SaludEnemigos.saludActual = 10;
-                Enemigo.speed = 2;
+                Enemigo.velocidad = 2;
 
             }
             else
@@ -131,6 +143,9 @@ public class EliminarEnemigo : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Metodo encargado de obtener el estado de los enemigos
+    /// </summary>
     private void ObtenerEstadoEnemigos() {
 
         switch (tag) {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AtributosLlaves : MonoBehaviour
 {
+    //varibales de script
     public static bool llave1;
     public static bool llave2;
     public static bool llave3;

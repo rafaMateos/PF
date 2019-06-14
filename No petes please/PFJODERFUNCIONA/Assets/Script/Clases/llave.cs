@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class llave : MonoBehaviour
 {
-
+    //Variables de clase
     public static bool tieneLaLlave = false;
     public static List<SpriteRenderer> lista = new List<SpriteRenderer>();
     GameObject llaves;
@@ -18,6 +18,11 @@ public class llave : MonoBehaviour
 
      
     }
+
+    /// <summary>
+    /// Evento trigguer de colision gestor de las llaves que tenemos
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -28,8 +33,11 @@ public class llave : MonoBehaviour
         audio.Play();
 
         for (int i = 0; i < lista.Count; i++) {
-          
-            Debug.Log(lista.Count);
+            if (lista.Count > 0) {
+
+                AtributosJugador.tieneLlave = true;
+            }
+           
         }
     }
 

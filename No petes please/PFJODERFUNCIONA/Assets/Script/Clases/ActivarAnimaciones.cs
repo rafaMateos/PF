@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ActivarAnimaciones : MonoBehaviour
 {
+    //Atributos script
     Animator animacion;
     public string Nombreanimacion;
     BoxCollider2D collider;
@@ -13,7 +14,9 @@ public class ActivarAnimaciones : MonoBehaviour
     private bool estaAbierto;
     public bool estaAbiertoCarga = false;
 
-    
+    /// <summary>
+    /// Metodo start en el cual se le dan valores a los atributos
+    /// </summary>
     void Start()
     {
         animacion = GetComponent<Animator>();
@@ -22,17 +25,28 @@ public class ActivarAnimaciones : MonoBehaviour
         estaAbierto = false;
     }
 
+    /// <summary>
+    /// Evento colision 
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
         esColision = true;
     }
 
+    /// <summary>
+    /// Evento salida colision
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionExit2D(Collision2D collision)
     {
         esColision = false;
 
     }
 
+    /// <summary>
+    /// Funcion update la cual se encargara de las animaciones de los cofres , y todo lo que ello con lleva(Drop de objetos , instanciacion cerca jugador..)
+    /// </summary>
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && esColision && !estaAbierto && !estaAbiertoCarga)
@@ -50,6 +64,9 @@ public class ActivarAnimaciones : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Funcion la cual obtiene segun tag el estado del cofre abierto
+    /// </summary>
     private void estadoPartidaCofres() {
 
         switch (tag)

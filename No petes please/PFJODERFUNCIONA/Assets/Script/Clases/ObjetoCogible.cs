@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjetoCogible : MonoBehaviour
 {
 
+    // Variables de clase
     public static Inventario inventario;
     public GameObject Item;
     
@@ -15,6 +16,10 @@ public class ObjetoCogible : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Evento trigguer para colision de objeto
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -24,6 +29,9 @@ public class ObjetoCogible : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Metodo encargado de la instanciacion del objeto en el inventario
+    /// </summary>
     public void instanciarInven() {
         for (int i = 0; i < inventario.slots.Length; i++)
         {
@@ -38,6 +46,9 @@ public class ObjetoCogible : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Metodo encargado de la instanciacion del objeto en el inventario interno
+    /// </summary>
     public void instanciarInven(GameObject item)
     {
         bool acabado = false;

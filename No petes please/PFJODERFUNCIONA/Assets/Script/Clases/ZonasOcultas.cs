@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class ZonasOcultas : MonoBehaviour
 {
-
+    //Variables de clase
     public GameObject llaveAbierta;
     private bool estaEnPuerta;
     public GameObject puertaAbrir;
-    private bool yaAbierta;
     public Canvas msg;
 
     private void Start()
@@ -16,7 +15,10 @@ public class ZonasOcultas : MonoBehaviour
         puertaAbrir.GetComponent<Animator>().Play("iddle");
     }
 
-
+    /// <summary>
+    /// Gestor de colisiones para obtner la posicion del jugador(Si esta o no cerca de una palanca)
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Player")) {
@@ -81,6 +83,10 @@ public class ZonasOcultas : MonoBehaviour
       
     }
 
+    /// <summary>
+    /// Gestor de salidas de colisiones 
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Player"))
@@ -93,6 +99,9 @@ public class ZonasOcultas : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gestor de llaves, cambiar estado palancas zonas ocultas
+    /// </summary>
     private void Update()
     {
 
@@ -103,18 +112,14 @@ public class ZonasOcultas : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = llaveAbierta.GetComponent<SpriteRenderer>().sprite;
             puertaAbrir.GetComponent<BoxCollider2D>().enabled = false;
             puertaAbrir.GetComponent<Animator>().Play("parar");
-            yaAbierta = true;
             StartCoroutine(acabarConObjeto());
         }
-        else {
 
-          
-        }
-
-        
-      
     }
 
+    /// <summary>
+    /// Obtener el estado de las puertas
+    /// </summary>
     private void cambiarEstadoPuertas() {
 
         switch (puertaAbrir.tag) {

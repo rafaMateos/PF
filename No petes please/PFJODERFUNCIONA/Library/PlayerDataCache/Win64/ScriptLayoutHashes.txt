@@ -157,6 +157,7 @@ b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 2da39ed5bf71d7803b221a42a845bb45 Assembly-CSharp.dll:.ScorePoint
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.AcabrPartida
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.AtributosLlaves
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DatosInventario
 f76bf75bdc6ad2c4760f56c471a9d3b1 Assembly-CSharp.dll:.PuzlePalancas
 3375c3d749f8f4cad889721b431bdc27 Assembly-CSharp.dll:TMPro.Examples.CameraController
 e63944317d2f5958e31963668bb29158 Assembly-CSharp.dll:TMPro.Examples.VertexJitter
@@ -265,7 +266,7 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DatosPartida
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 0784d4fd5b93bd75440d01eb2fac4233 Assembly-CSharp.dll:TMPro.Examples.VertexShakeA
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.RecuperarDatos
+be819341624fb9579e57390943e0319a Assembly-CSharp.dll:.RecuperarDatos
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.mostrarDialogo
 8b1fe5dfdcf943fb3b72506b9f19335f Assembly-CSharp.dll:.EnvMapAnimator
 dfd05dd656fce650efaff350965cc09d Assembly-CSharp.dll:.Enemigo

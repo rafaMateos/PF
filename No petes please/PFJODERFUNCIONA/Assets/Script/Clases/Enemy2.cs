@@ -4,60 +4,65 @@ using UnityEngine;
 
 public class Enemy2 : MonoBehaviour
 {
-    public float visionRadius;
-    public float attackRadius;
-    public float speed;
-    private float speedMAX;
+    //Varibles de clase
+    public float visionEnemigos;
+    public float radioAtaque;
+    public float velocidad;
+    private float velocidadMax;
 
-    // Variable para guardar al jugador
-    GameObject player;
-
-    // Variable para guardar la posición inicial
-    Vector3 initialPosition, target;
-
+    GameObject Jugador;
+    Vector3 posicionInicial, Objetivo;
     Animator animaciones;
     Rigidbody2D rb2d;
 
 
-
+    /// <summary>
+    /// Evento de colision
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        speed = 0;
+        velocidad = 0;
         animaciones.Play("andando", -1, 0);
         animaciones.Play("ataque");
 
     }
 
+    /// <summary>
+    /// Evento de salida de colision
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionExit2D(Collision2D collision)
     {
         animaciones.Play("ataque", -1, 0);
         animaciones.Play("andando");
-        speed = speedMAX;
+        velocidad = velocidadMax;
     }
 
 
-
+    /// <summary>
+    /// Obtnemos el estado de las variables en el metodo satrt
+    /// </summary>
     void Start()
     {
         animaciones = GetComponent<Animator>();
-        speedMAX = speed;
-        // Recuperamos al jugador gracias al Tag
-        player = GameObject.FindGameObjectWithTag("Player");
-
-        // Guardamos nuestra posición inicial
-        initialPosition = transform.position;
-
-
+        velocidadMax = velocidad;
+     
+        Jugador = GameObject.FindGameObjectWithTag("Player");
+        posicionInicial = transform.position;
         rb2d = GetComponent<Rigidbody2D>();
 
-        ///--- Iniciamos la vida
+    
 
     }
 
+    /// <summary>
+    /// Gestionamos frame a frame el estado , posicion de los enemigos
+    /// </summary>
     void Update()
     {
 
-        if (transform.position.x > player.transform.position.x)
+        if (transform.position.x > Jugador.transform.position.x)
         {
             GetComponent<SpriteRenderer>().flipX = true;
         }
@@ -65,75 +70,54 @@ public class Enemy2 : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().flipX = false;
         }
-        // Por defecto nuestro target siempre será nuestra posición inicial
-        target = initialPosition;
+     
+        Objetivo = posicionInicial;
 
-        // Comprobamos un Raycast del enemigo hasta el jugador
+      
         RaycastHit2D hit = Physics2D.Raycast(
             transform.position,
-            player.transform.position - transform.position,
-            visionRadius,
+            Jugador.transform.position - transform.position,
+            visionEnemigos,
             1 << LayerMask.NameToLayer("Default")
-        // Poner el propio Enemy en una layer distinta a Default para evitar el raycast
-        // También poner al objeto Attack y al Prefab Slash una Layer Attack 
-        // Sino los detectará como entorno y se mueve atrás al hacer ataques
+        
         );
 
-        // Aquí podemos debugear el Raycast
-        Vector3 forward = transform.TransformDirection(player.transform.position - transform.position);
+      
+        Vector3 forward = transform.TransformDirection(Jugador.transform.position - transform.position);
         Debug.DrawRay(transform.position, forward, Color.red);
 
-        // Si el Raycast encuentra al jugador lo ponemos de target
+       
         if (hit.collider != null)
         {
             if (hit.collider.tag == "Player")
             {
-                target = player.transform.position;
+                Objetivo = Jugador.transform.position;
             }
         }
 
-        // Calculamos la distancia y dirección actual hasta el target
-        float distance = Vector3.Distance(target, transform.position);
-        Vector3 dir = (target - transform.position).normalized;
+        float distance = Vector3.Distance(Objetivo, transform.position);
+        Vector3 dir = (Objetivo - transform.position).normalized;
 
-        // Si es el enemigo y está en rango de ataque nos paramos y le atacamos
-        if (target != initialPosition && distance < attackRadius)
+       
+        if (Objetivo != posicionInicial && distance < radioAtaque)
         {
-
+            //Nothing else...
         }
-        // En caso contrario nos movemos hacia él
         else
         {
-            rb2d.MovePosition(transform.position + dir * speed * Time.deltaTime);
-
-            // Al movernos establecemos la animación de movimiento
-
+            rb2d.MovePosition(transform.position + dir * velocidad * Time.deltaTime);
         }
-
-        // Una última comprobación para evitar bugs forzando la posición inicial
-        if (target == initialPosition && distance < 0.05f)
+        if (Objetivo == posicionInicial && distance < 0.05f)
         {
-            transform.position = initialPosition;
-            // Y cambiamos la animación de nuevo a Idle
-
+            transform.position = posicionInicial;
         }
-
-        // Y un debug optativo con una línea hasta el target
-        Debug.DrawLine(transform.position, target, Color.green);
+        Debug.DrawLine(transform.position, Objetivo, Color.green);
     }
 
-    // Podemos dibujar el radio de visión y ataque sobre la escena dibujando una esfera
-    void OnDrawGizmosSelected()
-    {
-
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, visionRadius);
-        Gizmos.DrawWireSphere(transform.position, attackRadius);
-
-    }
+   
 
 
-    ///---  Dibujamos las vidas del enemigo en una barra 
+   
 
 
 

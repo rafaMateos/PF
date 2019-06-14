@@ -6,10 +6,8 @@ public class InventarioController : MonoBehaviour
 {
 
     public void aumentarVida1() {
-
-        ControladorSalud.aumentarVida();
+        ControladorSalud.aumentarVidaPocion();
         DatosInventario.soltarObjetosInventario("Untagged");
-
     }
 
     

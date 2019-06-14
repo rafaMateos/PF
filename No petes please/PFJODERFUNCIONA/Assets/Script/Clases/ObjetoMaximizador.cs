@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ObjetoMaximizador : MonoBehaviour
 {
-
+    //Variables de clase
     public Canvas canvasTiempo;
     public Text textoTiempo;
     public static float tiempo = 0;
@@ -21,6 +21,10 @@ public class ObjetoMaximizador : MonoBehaviour
         tiempo = 30;
         esObjetoTocado = false;
     }
+
+    /// <summary>
+    /// Metodo encargado de maximizar los atributos del jugador tras obtner el objeto 
+    /// </summary>
     public void obtenerMax()
     {
 
@@ -55,6 +59,9 @@ public class ObjetoMaximizador : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Funcion update encargada de la gestion del tiempo
+    /// </summary>
     private void Update()
     {
      

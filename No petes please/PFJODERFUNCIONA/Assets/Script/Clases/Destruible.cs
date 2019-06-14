@@ -4,32 +4,29 @@ using UnityEngine;
 
 public class Destruible : MonoBehaviour
 {
-   
-    // Variable para guardar el nombre del estado de destruccion
-    public string destroyState;
-    // Variable con los segundos a esperar antes de desactivar la colisión
-    public float timeForDisable;
-
-    // Animador para controlar la animación
-    Animator anim;
+    //Variables de clase
+    public string estado;
+    public float tiempo;
+    Animator aniamciones;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        aniamciones = GetComponent<Animator>();
     }
 
-    // Detectamos la colisión con una corrutina
+  
+    /// <summary>
+    /// Eventos de colision gestionar cuando debe de suceder algun evento random y desactivar las que estes activas
+    /// </summary>
+    /// <param name="col"></param>
+    /// <returns></returns>
     IEnumerator OnTriggerEnter2D(Collider2D col)
     {
-        // Si es un ataque
         if (col.tag == "Ataque")
         {
+            aniamciones.Play(estado);
+            yield return new WaitForSeconds(tiempo);
 
-            // Reproducimos la animación de destrucción y esperamos
-            anim.Play(destroyState);
-            yield return new WaitForSeconds(timeForDisable);
-
-            // Pasados los segundos de espera desactivamos los colliders 2D
             foreach (Collider2D c in GetComponents<Collider2D>())
             {
                 c.enabled = false;
@@ -37,10 +34,11 @@ public class Destruible : MonoBehaviour
 
         }
         CambiarEstadoJarron();
-
     }
 
-
+    /// <summary>
+    /// Obtener estado jarrones
+    /// </summary>
     private void CambiarEstadoJarron() {
 
         switch (tag) {
@@ -62,18 +60,17 @@ public class Destruible : MonoBehaviour
                 break;
         }
     }
+
+    /// <summary>
+    /// Metodo encargado de cancelar la animacion y destruir el objeto
+    /// </summary>
     void Update()
-    {
+    { 
+        AnimatorStateInfo stateInfo = aniamciones.GetCurrentAnimatorStateInfo(0);
 
-        // "Destruir" el objeto al finalizar la animación de destrucción
-        // El estado debe tener el atributo 'loop' a false para no repetirse
-        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-
-        if (stateInfo.IsName(destroyState) && stateInfo.normalizedTime >= 1)
+        if (stateInfo.IsName(estado) && stateInfo.normalizedTime >= 1)
         {
             Destroy(gameObject);
-            // En el futuro podríamos almacenar la instancia y su transform
-            // para crearlos de nuevo después de un tiempo
         }
 
     }

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class GuardarController : MonoBehaviour
 {
+    //Variables de script
     private string rutaGuardado = "C:/Users/" + Environment.UserName + "/Guardado/" + DatosPartida.nombrePartida + ".txt";
   
     string rutaGuardado2 = "C:/Users/" + Environment.UserName + "/Guardado/";
@@ -15,7 +16,9 @@ public class GuardarController : MonoBehaviour
     public Canvas canvasMenuPausa;
     public Canvas sobreescribir;
 
-   
+   /// <summary>
+   /// Metodo el cual genera los datos necesarios para guardar el estado de una partida
+   /// </summary>
     public void GuardarPartidaInGame() {
 
         Directory.CreateDirectory(rutaGuardado2);
@@ -114,7 +117,7 @@ public class GuardarController : MonoBehaviour
                                  + "_" + "espadaEquipada:" + DatosPartida.espadaEquipada
                                  ;
 
-            for (int i = 0; i < DatosInventario.objetosEnInventario.Count; i++) {
+            for (int i = 0; i < DatosInventario.objetosEnInventario.Length; i++) {
                 datosAGuardar += "_" + "slot:" + DatosInventario.objetosEnInventario[i];
             }
 
@@ -138,6 +141,10 @@ public class GuardarController : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Funcion que nos mostrara el canvas guardando
+    /// </summary>
+    /// <returns></returns>
     IEnumerator mostrarGuardando()
     {
         yield return new WaitForSeconds(2f);

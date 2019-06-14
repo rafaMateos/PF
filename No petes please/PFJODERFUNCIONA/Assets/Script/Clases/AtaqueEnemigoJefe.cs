@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class AtaqueEnemigoJefe : MonoBehaviour
 {
-
+    //Variables de script
     public GameObject prefabAtaqueDistancia;
     private Animator animaciones;
     private AudioSource sonido;
 
+    /// <summary>
+    /// Metodo awake el cual se encargara de gestionar la repiticon del ataque del jefe
+    /// </summary>
     private void Awake()
     {
         InvokeRepeating("ataquedistancia", 4f, 4f);
         animaciones = GetComponent<Animator>();
         sonido = GetComponent<AudioSource>();
     }
-
+    /// <summary>
+    /// Funcion la cual se encargara de realizar el ataque sobre el personage
+    /// </summary>
     private void ataquedistancia() {
 
         animaciones.enabled = true;

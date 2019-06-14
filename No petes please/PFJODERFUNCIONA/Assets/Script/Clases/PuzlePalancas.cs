@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PuzlePalancas : MonoBehaviour
 {
-
+    //Varibles de script
     private string[] palancas;
     private string[] palancas2;
     public string[] patron;
@@ -18,7 +18,7 @@ public class PuzlePalancas : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("hola");
+       
         palancas = new string[5];
         palancas2 = new string[5];
         for (int i = 0; i < palancas.Length; i++) {
@@ -27,6 +27,9 @@ public class PuzlePalancas : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Metodo encargado de ccambiar esatdo de palancas y comprobar si los patrones coinciden
+    /// </summary>
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && AtributosPuzle.estaEnPalanca)
@@ -63,6 +66,10 @@ public class PuzlePalancas : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Corrutina encargada de destruir puertas tras acierto
+    /// </summary>
+    /// <returns></returns>
     IEnumerator acabarConObjeto()
     {
         yield return new WaitForSeconds(1f);
@@ -71,6 +78,10 @@ public class PuzlePalancas : MonoBehaviour
         if (puerta2)
             Destroy(puertaAbrir2);
     }
+
+    /// <summary>
+    /// Metodo encargado de la obtencion y modificacion de las palancas
+    /// </summary>
     void obtenerPosicionPalancas() {
 
         switch (AtributosPuzle.ultimaPalanca)

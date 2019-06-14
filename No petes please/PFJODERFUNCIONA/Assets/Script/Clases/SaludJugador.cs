@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class SaludJugador : MonoBehaviour
 {
+    //Variables de clase
     Animator anim;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
 
+    /// <summary>
+    /// Metodo update encargado de matar al jugador 
+    /// </summary>
     private void Update()
     {
         if (AtributosJugador.vidas <= 0) {

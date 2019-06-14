@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
+    //Variables de clase
     public float velocidad = 3F;
     Animator movAnimacion;
     Rigidbody2D caminarJugador;
@@ -26,6 +27,10 @@ public class Movimiento : MonoBehaviour
         ataque.enabled = false;
 
     }
+
+    /// <summary>
+    /// Funcion update encargada de la gestion de acciones del jugador , como movimientos, ataques a distancia..
+    /// </summary>
     void Update()
     {
        posicion =
@@ -67,6 +72,10 @@ public class Movimiento : MonoBehaviour
         atacarConMagia();
     }
 
+
+    /// <summary>
+    /// Funcion para atacar con magia
+    /// </summary>
     private void atacarConMagia() {
 
         if (Input.GetKeyDown(KeyCode.LeftAlt))
@@ -77,11 +86,12 @@ public class Movimiento : MonoBehaviour
         {
 
                 float direccion = Mathf.Atan2(movAnimacion.GetFloat("movY"), movAnimacion.GetFloat("movX")) * Mathf.Rad2Deg;
-                GameObject ataquedistancia = Instantiate(prefabAtaqueDistancia, transform.position, Quaternion.AngleAxis(direccion, Vector3.forward));
+              
 
                 AtaqueDistancia ataque = prefabAtaqueDistancia.GetComponent<AtaqueDistancia>();
                 ataque.direccionAtaque.x = movAnimacion.GetFloat("movX");
                 ataque.direccionAtaque.y = movAnimacion.GetFloat("movY");
+            GameObject ataquedistancia = Instantiate(prefabAtaqueDistancia, transform.position, Quaternion.AngleAxis(direccion, Vector3.forward));
             if (!AtributosJugador.manaInfinito) {
                 AtributosJugador.mana -= (float)0.1;
                 

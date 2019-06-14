@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class ConjuntoEnemigos : MonoBehaviour
 {
+    /// <summary>
+    /// Varibales de script
+    /// </summary>
     private SpriteRenderer Jugador;
     private SpriteRenderer Enemigos;
     private GameObject ObjetoJugador;
     private GameObject material;
     private GameObject Gestor;
-  
     public GameObject[] EnmigosArray;
     public bool yaEsJefe;
 
    
+    /// <summary>
+    /// Obtenemos valores para variables
+    /// </summary>
     void Start()
     {
         ObjetoJugador = GameObject.Find("Character");
@@ -24,7 +29,10 @@ public class ConjuntoEnemigos : MonoBehaviour
         Gestor = GameObject.FindGameObjectWithTag("Management");
     }
 
-
+    /// <summary>
+    /// Evento de entrada colision
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -34,7 +42,10 @@ public class ConjuntoEnemigos : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Corrutina de desaparicion
+    /// </summary>
+    /// <returns></returns>
     IEnumerator desaparecer()
     {
         for (float i = 0f; i < 1f; i += 2.6f)
@@ -44,8 +55,11 @@ public class ConjuntoEnemigos : MonoBehaviour
         Destroy(gameObject);
     }
 
-
-    IEnumerator desaparecerJefe()
+    /// <summary>
+    /// Corrutina para obtener los enemigos
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator obtnerEnemigos()
     {
         for (float i = 0f; i < 1f; i = i + 0.02f)
         {
@@ -56,12 +70,16 @@ public class ConjuntoEnemigos : MonoBehaviour
         Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Evento de colision
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
      
             if (yaEsJefe)
             {
-                StartCoroutine(desaparecerJefe());
+                StartCoroutine(obtnerEnemigos());
             }
             else
             {

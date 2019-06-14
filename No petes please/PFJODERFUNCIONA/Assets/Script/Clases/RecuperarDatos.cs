@@ -8,10 +8,15 @@ using UnityEngine.UI;
 public class RecuperarDatos : MonoBehaviour
 {
    
+    //Variables de clase
     private string rutaGuardado = "C:/Users/" + Environment.UserName + "/Guardado/" + CargarController.nombrePartida + ".txt";
     public GameObject pocion;
     public GameObject mana;
     public GameObject vida;
+
+    /// <summary>
+    /// Metodo start encargado de recuperar los datos tras cargar partida
+    /// </summary>
     private void Start()
     {
        
@@ -31,6 +36,7 @@ public class RecuperarDatos : MonoBehaviour
        
     }
 
+    #region obtener Estado Objetos Juego
     private void ObtenerPosicionGuardada() {
         string datosACargar = GuardarPartida.LeeArchivo(rutaGuardado);
         string[] listaDatosPosicion = datosACargar.Split('_');
@@ -646,6 +652,7 @@ public class RecuperarDatos : MonoBehaviour
         string[] enemigo50 = listaEnemigos[109].Split(':');
         string[] enemigo51 = listaEnemigos[110].Split(':');
         string[] enemigo52 = listaEnemigos[111].Split(':');
+       
 
 
 
@@ -1015,11 +1022,11 @@ public class RecuperarDatos : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("puerta6"));
             DatosPartida.puerta6 = true;
         }
-        if (puertaEstado6.Equals("True"))
+        if (puertaEstado7.Equals("True"))
         {
 
-            Destroy(GameObject.FindGameObjectWithTag("puerta6"));
-            DatosPartida.puerta6 = true;
+            Destroy(GameObject.FindGameObjectWithTag("puerta7"));
+            DatosPartida.puerta7= true;
         }
     }
     private void ObtenerEstadoArmadura() {
@@ -1177,4 +1184,5 @@ public class RecuperarDatos : MonoBehaviour
         }
 
     }
+    #endregion
 }

@@ -5,14 +5,15 @@ using UnityEngine;
 public class Enemigo : MonoBehaviour
 {
   
-    // Variables para gestionar el radio de visión, el de ataque y la velocidad
-    public float visionRadius;
-    public float attackRadius;
-    public static float speed = 2;
+    //Estas clases como enemigo, boos son parecidas ya que son una IA para el movimiento de enemigos
 
+    //Variables de clase
+    public float radioDeVision;
+    public float radioDeAtaque;
+    public static float velocidad = 2;
+    bool andando;
     GameObject player;
     Vector3 initialPosition, target;
-    //Animator anim;
     Rigidbody2D rb2d;
 
     void Start()
@@ -21,7 +22,7 @@ public class Enemigo : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         initialPosition = transform.position;
 
-        //anim = GetComponent<Animator>();
+       
         rb2d = GetComponent<Rigidbody2D>();
     }
 
@@ -31,7 +32,7 @@ public class Enemigo : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(
             transform.position,
             player.transform.position - transform.position,
-            visionRadius,
+            radioDeVision,
             1 << LayerMask.NameToLayer("Default")
       
         );
@@ -52,16 +53,14 @@ public class Enemigo : MonoBehaviour
         float distance = Vector3.Distance(target, transform.position);
         Vector3 dir = (target - transform.position).normalized;
 
-        if (target != initialPosition && distance < attackRadius)
+        if (target != initialPosition && distance < radioDeAtaque)
         {
-           // anim.SetFloat("movX", dir.x);
-           // anim.SetFloat("movY", dir.y);
-           // anim.Play("Enemy_Walk", -1, 0);  
+            andando = true;
         }
      
         else
         {
-            rb2d.MovePosition(transform.position + dir * speed * Time.deltaTime);  
+            rb2d.MovePosition(transform.position + dir * velocidad * Time.deltaTime);  
         }
 
         if (target == initialPosition && distance < 0.05f)
@@ -79,8 +78,8 @@ public class Enemigo : MonoBehaviour
     {
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, visionRadius);
-        Gizmos.DrawWireSphere(transform.position, attackRadius);
+        Gizmos.DrawWireSphere(transform.position, radioDeVision);
+        Gizmos.DrawWireSphere(transform.position, radioDeAtaque);
 
     }
 

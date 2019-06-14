@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -6,7 +7,8 @@ using UnityEngine.UI;
 
 public class CargarController : MonoBehaviour
 {
-    private static string rutaGuardado = "C:/Users/Rafael/Guardado.txt";
+    //Varibles de Script
+    private static string rutaGuardado = "C:/Users/" + Environment.UserInteractive + "/" + DatosPartida.nombrePartida;
     public static string nombrePartida = "";
     public Text texto;
     public Text texto1;
@@ -14,6 +16,9 @@ public class CargarController : MonoBehaviour
     public static float posX;
     public static float posY;
 
+    /// <summary>
+    /// Metodo encargado de cargar la partida por defecto
+    /// </summary>
     public void cargarPartidaInGame() {
 
         float posicionJugadorX = 0f;

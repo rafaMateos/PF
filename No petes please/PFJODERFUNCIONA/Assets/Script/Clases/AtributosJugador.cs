@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class AtributosJugador : MonoBehaviour
 {
 
-    public static int vidas = 999;
+    //Varibles de script
+    public static int vidas = 300;
     public static float mana = 1;
     public static AtributosJugador atributosJugador;
     public Text Texto;
@@ -17,16 +18,24 @@ public class AtributosJugador : MonoBehaviour
     public static bool botasRapidas;
     public static bool vidainfinita;
     public static bool manaInfinito;
+    public static bool tieneLlave;
+    
 
+    /// <summary>
+    /// 
+    /// </summary>
     private void Start()
     {
         atributosJugador = this;
         Mana = GetComponent<RectTransform>();
     }
 
+    /// <summary>
+    /// Metodo update el cual gestiona el valor de las variables asincronas del jugador
+    /// </summary>
     private void Update()
     {
-        vidainfinita = true;
+       
         Texto.text = vidas.ToString();
         if (Mana != null) {
             Mana.localScale = new Vector3(mana, 1, 1);

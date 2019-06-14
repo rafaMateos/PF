@@ -88,7 +88,6 @@
     <Compile Include="Assets\Script\Clases\Destruible.cs" />
     <Compile Include="Assets\Script\Clases\Destruir.cs" />
     <Compile Include="Assets\Script\Clases\Dialog.cs" />
-    <Compile Include="Assets\Script\Clases\DialogosPersonages.cs" />
     <Compile Include="Assets\Script\Clases\EliminarEnemigo.cs" />
     <Compile Include="Assets\Script\Clases\Enemigo.cs" />
     <Compile Include="Assets\Script\Clases\EnemigoPingPong.cs" />
@@ -107,14 +106,11 @@
     <Compile Include="Assets\Script\Clases\llave.cs" />
     <Compile Include="Assets\Script\Clases\ManagerGame.cs" />
     <Compile Include="Assets\Script\Clases\ManejadoraTienda.cs" />
-    <Compile Include="Assets\Script\Clases\MensagePersonages.cs" />
     <Compile Include="Assets\Script\Clases\Mensaje.cs" />
     <Compile Include="Assets\Script\Clases\MostraCargarPartida.cs" />
-    <Compile Include="Assets\Script\Clases\mostrarDialogo.cs" />
     <Compile Include="Assets\Script\Clases\MostrarJugarPartida.cs" />
     <Compile Include="Assets\Script\Clases\Movimiento.cs" />
     <Compile Include="Assets\Script\Clases\ObjetoCogible.cs" />
-    <Compile Include="Assets\Script\Clases\ObjetoComprable.cs" />
     <Compile Include="Assets\Script\Clases\ObjetoMaximizador.cs" />
     <Compile Include="Assets\Script\Clases\ObtenerLlave.cs" />
     <Compile Include="Assets\Script\Clases\PausaController.cs" />

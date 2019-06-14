@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ManejadoraTienda : MonoBehaviour
 {
+    //Variables de clase
     public static int precio;
     public Canvas tienda;
     public Text texto;
@@ -31,7 +32,11 @@ public class ManejadoraTienda : MonoBehaviour
     public GameObject torsoArmaduraRoto;
     public GameObject piernasArmaduraRoto;
 
+    //Esta clase se explica sola, gestiona todo lo relaciona con la compra de objetos en la tienda
 
+        /// <summary>
+        /// Metodo estar que obtendra los valores del jugador si al cargar tiene alguno de estos objetos equipados
+        /// </summary>
     private void Start()
     {
      
@@ -76,10 +81,9 @@ public class ManejadoraTienda : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<Movimiento>().velocidad = 6;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-       
-    }
+   /// <summary>
+   /// Metodo encargado de la compra de objetos
+   /// </summary>
     public void comprarObjeto()
     {
 
@@ -173,6 +177,7 @@ public class ManejadoraTienda : MonoBehaviour
                         GameObject.FindGameObjectWithTag("Player").GetComponent<Movimiento>().velocidad = 6;
                         ScorePoint.puntos -= ConstantesTeinda.PRECIOARMADURAMEDIA;
                         AtributosJugador.armaduraEquipada = "armaduraMedia";
+                        golpesMedia = ConstantesArmaduras.golpesAguantaArmaduraMedia;
 
 
                     }
@@ -192,6 +197,9 @@ public class ManejadoraTienda : MonoBehaviour
            
     }
 
+    /// <summary>
+    /// funcion update encargada de la actualizacion de objetos y estados jugador
+    /// </summary>
     private void Update()
     {
       

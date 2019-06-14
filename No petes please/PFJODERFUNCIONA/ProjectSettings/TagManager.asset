@@ -166,6 +166,7 @@ TagManager:
   - piernas
   - torso
   - pocion
+  - Enemigo55
   layers:
   - Default
   - TransparentFX

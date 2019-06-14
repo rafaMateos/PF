@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 public class Dialog : MonoBehaviour
 {
+    //variables de script
     private AudioSource audio;
     public Canvas canvas;
     public TextMeshProUGUI textoMostrar;
@@ -11,7 +12,10 @@ public class Dialog : MonoBehaviour
     private int indice;
     Movimiento m = new Movimiento();
 
-
+    /// <summary>
+    /// Coorutina para recorrer el dialogo
+    /// </summary>
+    /// <returns></returns>
     IEnumerator recorrerDialogo() {
 
         GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().enabled = false;

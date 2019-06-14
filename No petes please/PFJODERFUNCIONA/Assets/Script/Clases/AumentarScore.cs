@@ -4,25 +4,17 @@ using UnityEngine;
 
 public class AumentarScore : MonoBehaviour
 {
-
+    //Variables de script
     public static int puntos = 20;
 
-
+    /// <summary>
+    /// Metodo encargado del aumento de monedas
+    /// </summary>
     public static void aumentarPuntos() {
 
         ScorePoint.puntos += puntos;
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

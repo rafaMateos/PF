@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class ActivacionTienda : MonoBehaviour
 {
-
+    //Atributos script
     public Canvas tienda;
     public static string tagObjetoCocado;
 
-
-    private void Start()
-    {
-        
-    }
+    /// <summary>
+    /// Funcion de evento colision la cual se encargara de activar con los datos correspondientes los objetos de la tienda
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
 

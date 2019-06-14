@@ -51,10 +51,7 @@ public class GestorAtaquesPasillo : MonoBehaviour
     {
         if (transform.position.x > GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position.x)
         {
-
             GetComponent<SpriteRenderer>().flipX = true;
-
-
         }
         else
         {
